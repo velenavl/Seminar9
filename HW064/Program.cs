@@ -1,11 +1,9 @@
 ﻿// Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
 
-string NaturalNumber(int M, int N)
+string NumbersRec(int a, int b) 
 {
-    if (M < N)
-        return $"{M} " + NaturalNumber(M + 1, N);
-    else
-        return $"{M}";
+    if (a <= b) return $"{a} " + NumbersRec(a + 1, b);
+    else return string.Empty;
 }
 
-Console.WriteLine(NaturalNumber(1, 5));
+Console.WriteLine(NumbersRec(4, 8));
